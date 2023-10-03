@@ -56,7 +56,5 @@ const pickeColor = async () => {
 
 };
 
-console.log(colors);
-
 pickerBtn.addEventListener("click", pickeColor);
 clearBtn.addEventListener("click", clearColors);
