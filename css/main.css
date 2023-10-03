@@ -1,0 +1,109 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --white-color: #fff;
+    --black-color: #222;
+    --light-color: #e4f2fe;
+    --blue-color: #4f70e7;
+    --blue-color-alt: #1e49e6;
+    --small-duration: 400ms;
+}
+
+body {
+    caret-color: transparent;
+    font-family: 'Cairo', sans-serif;
+    font-family: 'Poppins', sans-serif;
+    transition: opacity var(--small-duration);
+}
+
+.popup {
+    width: 350px;
+    overflow: hidden;
+}
+
+.popup>.picker {
+    height: 100px;
+    background-color: var(--light-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup>.picker>button {
+    border: none;
+    color: var(--white-color);
+    background-color: var(--blue-color);
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color var(--small-duration);
+}
+
+.popup>.picker>button:hover {
+    background-color: var(--blue-color-alt);
+}
+
+.popup>.picked-colors {
+    padding: 15px;
+    color: var(--black-color);
+}
+
+.popup>.picked-colors>.head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.popup>.picked-colors>.head>.title {
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.popup>.picked-colors>.head>.clear-all {
+    font-size: 16px;
+    color: var(--blue-color);
+    transition: background-color var(--small-duration);
+    cursor: pointer;
+}
+
+.popup>.picked-colors>.head>.clear-all:hover {
+    color: var(--blue-color-alt);
+}
+
+.popup>.picked-colors>.colors {
+    margin-top: 10px;
+    list-style-type: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+    gap: 5px;
+}
+
+.popup>.picked-colors>.colors.hide {
+    display: none;
+}
+
+.popup>.picked-colors>.colors>.color {
+    display: flex;
+    align-items: center;
+    font-weight: 400;
+    font-size: 14px;
+    cursor: pointer;
+    transition: color var(--small-duration);
+}
+
+.popup>.picked-colors>.colors>.color:hover {
+    color: var(--blue-color-alt);
+}
+
+.popup>.picked-colors>.colors>.color>span {
+    display: block;
+    padding: 7px;
+    margin-right: 10px;
+    border-radius: 2px;
+    border: 1px solid #eee;
+}
